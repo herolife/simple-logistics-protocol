@@ -1,4 +1,4 @@
-# v1.0.0 Simple Logistics Information Protocol (SLIP) 
+# v0.1.0 Simple Logistics Information Protocol (SLIP) 
 
 The Simple Logistics Information Protocol (SLIP) is a lightweight JSON based protocol for shippers, brokers, and carriers to share logistics quoting, status, and tracking information between servers.
 
@@ -95,7 +95,7 @@ It is also completely possible to extend or augment SLIP objects with additional
 
 | Key | Definition |
 |----------|----------|
-| `v` | SLIP protocol version e.g. `1.0.0` |
+| `v` | SLIP protocol version e.g. `0.1.0` |
 | `slipType` | The type of SLIP. Can be `request`, `response`, `auth`, `position`, `approval`, `status`, or `complete` |
 | `slipId` | The unique ID of this SLIP |
 | `slipInRefTo` | The unique ID of the SLIP this refers to. Usually the `slipId` of the original Quote Request SLIP. `null` if this is an original quote request |
@@ -177,7 +177,7 @@ Quote Request SLIP
 ```javascript
 
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "request", 
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -232,7 +232,7 @@ Quote Request SLIP
 Quote Response SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "request", 
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -298,7 +298,7 @@ Quote Response SLIP
 Bid SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "bid",
     "slipId": "w39484dkdllsssjsuJJ", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -317,7 +317,7 @@ Bid SLIP
 Quote Authorization SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "auth",
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -348,7 +348,7 @@ Quote Authorization SLIP
 Trip Approval SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "approval",
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -362,7 +362,7 @@ Trip Approval SLIP
 Position Update SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "position",
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -388,7 +388,7 @@ Position Update SLIP
 Status Update SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "status",
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
@@ -406,7 +406,7 @@ Status Update SLIP
 Complete SLIP
 ```javascript
 {
-    "v": "1.0.0",
+    "v": "0.1.0",
     "slipType": "request", 
     "slipId": "jGJUHsw211FEYjwj90js", 
     "slipInRefTo": "jsf73n3msf9sfji383eJKHs", 
