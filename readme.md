@@ -171,6 +171,8 @@ It is also completely possible to extend or augment SLIP objects with additional
 | `shipperStatusCode` | Status code set according to shipper's preferred status code type from original request SLIP|
 | `statusText` | Freight status description limited to 50 characters |
 | `customerApprovalNumber` | Customer's approval number for the trip, usually a Broker providing the Carrier with their billing authorization number if different from `carrierReferenceNumber` or `referenceNumber` |
+| `validUntil` | The UNIX timestamp that the quote response expires (beyond which asset availaibility cannot be guaranteed) | 
+| `moreInfoNeeded` | If `true` a phone call will be required to quote |
 
 ## Full SLIP Examples
 Quote Request SLIP 
@@ -289,6 +291,8 @@ Quote Response SLIP
     "costCents": 23,
     "currency": "USD",
     "eta": "13:25Z", 
+    "validUntil": 3739494773993,
+    "moreInfoNeeded": true,
     "createdAt": 37484638393937, 
     "carrierReferenceNumber": "SD-374848484", 
     }],
